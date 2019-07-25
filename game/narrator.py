@@ -38,3 +38,8 @@ Ta légende raisonnera pour des siècles et des siècles""")
                 print('Je ne reconnais pas ce personnage')
 
         return player_class
+
+    def player_customization(self, player):
+        self.transition(2)
+        name = input("Quel est votre nom aventurier ? : ")
+        player.name = name
