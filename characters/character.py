@@ -1,7 +1,7 @@
 # coding: utf-8
 
 class Character():
-    def __init__(self, name, life, attack, defense, agility):
+    def __init__(self, life, attack, defense, agility, name = False):
         self.name = name
         self.life = life
         self.attack = attack

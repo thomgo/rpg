@@ -37,4 +37,4 @@ Ta légende raisonnera pour des siècles et des siècles""")
             except:
                 print('Je ne reconnais pas ce personnage')
 
-        print(player_class)
+        return player_class

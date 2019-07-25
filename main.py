@@ -1,11 +1,12 @@
 # coding: utf-8
 
 from game.narrator import Narrator
-from characters.warrior import Warrior
+from game.factory import Factory
 
 if __name__ == '__main__':
-    player = Warrior("Thor")
     narrator = Narrator()
+
     narrator.introduction()
-    narrator.choose_character()
-    
+    choice = narrator.choose_character()
+    player = Factory.get_character(choice)
+    print(player)
