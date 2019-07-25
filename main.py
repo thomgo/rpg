@@ -10,4 +10,4 @@ if __name__ == '__main__':
     choice = narrator.choose_character()
     player = Factory.get_character(choice)
     narrator.player_customization(player)
-    print(player.name)
+    
