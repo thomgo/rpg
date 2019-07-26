@@ -43,3 +43,8 @@ Ta légende raisonnera pour des siècles et des siècles""")
         self.transition(2)
         name = input("Quel est votre nom aventurier ? : ")
         player.name = name
+
+    def tell(self, story):
+        for sentence in story:
+            self.transition(3)
+            print(sentence)

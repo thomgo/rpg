@@ -16,3 +16,9 @@ class Character():
             return False
         target.life -= self.attack - (target.defense/5)
         print("{} a maintenant {} de vie".format(target.name, target.life))
+
+    def escape(self):
+        agi = round(self.agility/5)
+        if random.randrange(0,100) <= agi:
+            return True
+        return False
