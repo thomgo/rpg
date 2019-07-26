@@ -1,8 +1,8 @@
 # coding: utf-8
-import os
-import time
 
-class Narrator():
+from game.storyAgent import storyAgent
+
+class Narrator(storyAgent):
     roles = {
         "guerrier" : "warrior",
         "archer" : "archer",
@@ -11,11 +11,6 @@ class Narrator():
 
     def __init__(self):
         pass
-
-    def transition(self, waiting_time):
-        """Function to make a break and clear the screen"""
-        time.sleep(waiting_time)
-        os.system('cls||clear')
 
     def introduction(self):
         self.transition(2)
