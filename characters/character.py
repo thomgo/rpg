@@ -2,6 +2,11 @@
 import random
 
 class Character():
+    actions = {
+        'a': 'attaquer',
+        'f': 'fuir'
+    }
+
     def __init__(self, life, attack, defense, agility, name = False):
         self.name = name
         self.life = life

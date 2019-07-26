@@ -18,7 +18,11 @@ class Arena(storyAgent):
     def battle(self):
         self.transition(2)
         while self.player.life > 0 and self.ennemy.life > 0:
-            action = input('Que souhaitez-vous faire (a=attaquer, f=fuir) ? : ').lower()
+            while True:
+                action = input('Que souhaitez-vous faire {} ? : '.format(self.player.actions)).lower()
+                if action in self.player.actions:
+                    break
+                print('Action impossible')
             if action == 'a':
                 self.player.attacks(self.ennemy)
             elif action == 'f':
