@@ -31,6 +31,9 @@ class Character():
             return False
         # Substract to target's life the character's attack minus the target defens divided by 5
         target.life -= self.attack - (target.defense/5)
+        # Make sure characters can not have negative life
+        if target.life < 0:
+            target.life = 0
         print("{} a maintenant {} de vie".format(target.name, target.life))
 
     def escape(self):

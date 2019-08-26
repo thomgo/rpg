@@ -37,9 +37,10 @@ class Arena(storyAgent):
             # If the character succeed to escape
             except Exception as e:
                 break
-            # Ennemie's turn
-            self.ennemy.attacks(self.player)
-            self.transition(3)
+            # Ennemie's turn, if not dead
+            if self.ennemy.life > 0:
+                self.ennemy.attacks(self.player)
+            self.transition(5)
         # End of the fight
         print('Le combat prend fin')
         self.fighters_leave()
