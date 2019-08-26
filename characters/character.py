@@ -40,3 +40,21 @@ class Character():
         if random.randrange(0,100) <= agi:
             return True
         return False
+
+    def make_action(self, action, ennemy):
+        """Function to execute the corresponding method based on an action string"""
+        if action not in self.actions:
+            print('Action impossible')
+            return False
+        if action == 'a':
+            self.attacks(ennemy)
+        elif action == 'f':
+            if self.escape():
+                # If the escape is a success we raise an exception because the fight comes to an end
+                print("Vous réussissez à fuir au dernier moment dans un élan d'agilité")
+                raise Exception('Character Escaping')
+            else:
+                print('Votre ennemi vous rattrape !')
+        elif action == 's':
+            self.heal()
+        return True
