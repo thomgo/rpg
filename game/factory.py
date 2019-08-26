@@ -1,8 +1,11 @@
 # coding: utf-8
 
 class Factory():
+    """Class to act like a pattern factory and product characters based on string class name"""
+
     @classmethod
     def get_character(self, class_name):
+        """Methode to return a warrior, archer or wizzard object"""
         if class_name == "warrior":
             from characters.warrior import Warrior
             return Warrior()
@@ -15,6 +18,7 @@ class Factory():
 
     @classmethod
     def get_ennemy(self, class_name):
+        """Methode to return an orc, wolf or zombie object"""
         if class_name == "orc":
             from characters.orc import Orc
             return Orc("Gentro")
