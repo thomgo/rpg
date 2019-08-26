@@ -32,6 +32,7 @@ class Arena(storyAgent):
                 action_is_allowed = False
                 # check if the character can make the action and execute it
                 while not action_is_allowed:
+                    print("{} || {}".format(self.player, self.ennemy))
                     action = input('Que souhaitez-vous faire {} ? : '.format(self.player.actions)).lower()
                     action_is_allowed = self.player.make_action(action, self.ennemy)
             # If the character succeed to escape

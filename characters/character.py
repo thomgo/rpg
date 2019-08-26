@@ -61,3 +61,6 @@ class Character():
         elif action == 's':
             self.heal()
         return True
+
+    def __str__(self):
+        return "{} : vie = {}".format(self.name, self.life)

@@ -4,7 +4,8 @@ from characters.character import Character
 
 class Wizzard(Character):
     """Class representing a wizzard character.
-    Attributs: mana"""
+    Attributs: mana
+    methods = heal, str"""
     actions: Character.actions.update({'s': 'se soigner'})
 
     def __init__(self, name = False):
@@ -22,3 +23,6 @@ class Wizzard(Character):
             print("{} regagne 20 points de vie, santé actuelle : {}".format(self.name, self.life))
         else :
             print("{} tente de puiser en lui les forces nécessaires pour se soigner mais son mana n'est pas suffisant".format(self.name))
+
+    def __str__(self):
+        return "{} : vie = {}, mana = {}".format(self.name, self.life, self.mana)
