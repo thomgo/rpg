@@ -40,6 +40,8 @@ class Arena(storyAgent):
                     break
                 else:
                     print('Votre ennemi vous rattrape !')
+            elif action == 's':
+                self.player.heal()
             self.ennemy.attacks(self.player)
             self.transition(3)
         print('Le combat prend fin')
