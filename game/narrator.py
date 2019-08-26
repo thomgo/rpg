@@ -6,7 +6,7 @@ class Narrator(storyAgent):
     """ Class to tell the story and interact with the player.
     class attributs: allowed roles with their translation
     attributs: none
-    methods: introduction, tell, choose_character, player_customization
+    methods: tell, choose_character, player_customization
     """
 
     roles = {
@@ -18,15 +18,10 @@ class Narrator(storyAgent):
     def __init__(self):
         pass
 
-    def introduction(self):
-        """Function to introduct the game by a little text with transition"""
-        self.transition(2)
-        print("""Bienvenue aventurier aux portes d'un nouveau monde de magie et de légendes
-Ici commence ton histoire, laisse toi guider par le narrateur de ce monde.
-Ta légende raisonnera pour des siècles et des siècles""")
-
     def tell(self, story):
         """Function to display with a transition each sentence of a given list"""
+        if not isinstance(story, list):
+            raise ValueError("Method tell of narrator class expects a list as argument")
         for sentence in story:
             self.transition(3)
             print(sentence)
