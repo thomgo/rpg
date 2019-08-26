@@ -5,26 +5,22 @@ class Factory():
 
     @classmethod
     def get_character(self, class_name):
-        """Methode to return a warrior, archer or wizzard object"""
+        """Methode to return a specific character object based on a class name"""
         if class_name == "warrior":
             from characters.warrior import Warrior
             return Warrior()
         elif class_name == "archer":
             from characters.archer import Archer
             return Archer()
-        else:
+        elif class_name == "wizzard":
             from characters.wizzard import Wizzard
             return Wizzard()
-
-    @classmethod
-    def get_ennemy(self, class_name):
-        """Methode to return an orc, wolf or zombie object"""
-        if class_name == "orc":
+        elif class_name == "orc":
             from characters.orc import Orc
-            return Orc("Gentro")
+            return Orc()
         elif class_name == "wolf":
             from characters.wolf import Wolf
-            return Wolf("Radak")
-        else:
+            return Wolf()
+        elif class_name == "zombie":
             from characters.zombie import Zombie
-            return Zombie("Sillion")
+            return Zombie()

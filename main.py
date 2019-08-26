@@ -21,7 +21,8 @@ if __name__ == '__main__':
     player = Factory.get_character(choice)
     narrator.player_customization(player)
     # Retrieve an ennemy from factory, for this scenario an orc
-    ennemy = Factory.get_ennemy('orc')
+    ennemy = Factory.get_character('orc')
+    ennemy.name = 'Gentro'
 
     # Exemple story to be told by the narrator
     story = [
