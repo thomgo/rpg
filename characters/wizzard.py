@@ -1,6 +1,6 @@
 #coding: utf-8
 
-from characters.character import Character
+from .character import Character
 
 class Wizzard(Character):
     """Class representing a wizzard character.

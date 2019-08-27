@@ -1,6 +1,6 @@
 # coding: utf-8
 
-from game.storyAgent import storyAgent
+from .storyAgent import storyAgent
 
 class Narrator(storyAgent):
     """ Class to tell the story and interact with the player.

@@ -1,6 +1,6 @@
 # coding: utf-8
 
-from game.storyAgent import storyAgent
+from .storyAgent import storyAgent
 
 class Arena(storyAgent):
     """Class to represent a battlefield during the story and manage the fights

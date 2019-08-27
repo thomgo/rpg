@@ -1,6 +1,6 @@
 #coding: utf-8
 
-from characters.character import Character
+from .character import Character
 
 class Archer(Character):
     """Class representing an archer character"""

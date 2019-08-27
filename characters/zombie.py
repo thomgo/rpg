@@ -1,6 +1,6 @@
 #coding: utf-8
 
-from characters.character import Character
+from .character import Character
 
 class Zombie(Character):
     """Class representing a zombie character"""
