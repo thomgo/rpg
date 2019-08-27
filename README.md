@@ -44,3 +44,5 @@ Vous pouvez par la suite essayer de transformer votre application en un jeu part
 - Des temps de pause et de transition pour donner du rythme à votre histoire
 - Une console interactive pour les combats, autrement dit, le joueur peut choisir lui-même l'action à exécuter (attaquer, se soigner...) et le combat ne se poursuit pas tant qu'il n'a pas choisi
 - Rajouter une méthode fuite qui offre aux personnages une faible chance de quitter le combat sans se battre
+- Afficher en temps réel les informations de chaque protagoniste du combat (sa vie et éventuellement son mana si c'est un magicien)
+- S'assurer que l'utilisateur ne puisse pas rentrer de commandes non-prévues ou lancer une action qui n'appartient pas à sa classe. Par exemple un archer ne peut pas lancer un sort de soin.
